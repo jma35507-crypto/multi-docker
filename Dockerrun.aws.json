@@ -1,14 +1,17 @@
 {
   "AWSEBDockerrunVersion": 2,
-  "containerDefinitions": [ {
-    "Name": "jma35507/frontend:latest",
-    "Update": "true"
-  },
-  "Ports": [
+  "containerDefinitions": [
     {
-      "ContainerPort": "80"
+      "name": "react-app-container",
+      "image": "jma35507/frontend:latest",
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "essential": true
     }
-  ],
-  "Logging": "/var/log/nginx"
- ]
+  ]
 }
