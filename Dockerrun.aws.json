@@ -1,6 +1,6 @@
 {
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [ {
     "Name": "jma35507/frontend:latest",
     "Update": "true"
   },
@@ -10,4 +10,5 @@
     }
   ],
   "Logging": "/var/log/nginx"
+ ]
 }
