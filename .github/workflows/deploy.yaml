@@ -13,15 +13,15 @@ jobs:
       - run: docker build -t jma35507-crypto/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true jma35507-crypto/react-test npm test
  
-      - run: docker build -t jma35507-crypto/multi-client ./client
-      - run: docker build -t jma35507-crypto/multi-ngnix ./nginx
-      - run: docker build -t jma35507-crypto/multi-server ./server
-      - run: docker build -t jma35507-crypto/multi-client ./worker
+      - run: docker build -t jma35507-crypto/multi-client-2026 ./client
+      - run: docker build -t jma35507-crypto/multi-ngnix-2026 ./nginx
+      - run: docker build -t jma35507-crypto/multi-server-2026 ./server
+      - run: docker build -t jma35507-crypto/multi-client-2026 ./worker
 
-      - run: docker push jma35507-crypto/multi-client
-      - run: docker push jma35507-crypto/multi-nginx
-      - run: docker push jma35507-crypto/multi-server
-      - run: docker push jma35507-crypto/multi-worker
+      - run: docker push jma35507-crypto/multi-client-2026
+      - run: docker push jma35507-crypto/multi-nginx-2026
+      - run: docker push jma35507-crypto/multi-server-2026
+      - run: docker push jma35507-crypto/multi-worker-2026
 
       - name: Generate deployment package
         run: zip -r deploy.zip -x '*.git*'
