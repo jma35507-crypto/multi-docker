@@ -14,7 +14,7 @@ jobs:
       - run: docker run -e CI=true jma35507/react-test npm test
  
       - run: docker build -t jma35507/multi-client-2026 ./client
-      - run: docker build -t jma35507/multi-ngnix-2026 ./nginx
+      - run: docker build -t jma35507/multi-nginx-2026 ./nginx
       - run: docker build -t jma35507/multi-server-2026 ./server
       - run: docker build -t jma35507/multi-client-2026 ./worker
 
