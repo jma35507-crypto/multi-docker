@@ -16,7 +16,7 @@ jobs:
       - run: docker build -t jma35507/multi-client-2026 ./client
       - run: docker build -t jma35507/multi-nginx-2026 ./nginx
       - run: docker build -t jma35507/multi-server-2026 ./server
-      - run: docker build -t jma35507/multi-client-2026 ./worker
+      - run: docker build -t jma35507/multi-worker-2026 ./worker
 
       - run: docker push jma35507/multi-client-2026
       - run: docker push jma35507/multi-nginx-2026
